@@ -9,7 +9,7 @@ import android.widget.Toast;
 public class Util {
 
 
-    public static String RootDirectoryInstagram = "/Insta Video Downloader/instagram videos/";
+    public static String RootDirectoryInstagram = "/Sous/Instagram/";
 
 
     public static void download(String downloadPath, String destinationPath, Context context, String fileName){
@@ -19,7 +19,7 @@ public class Util {
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         request.setTitle(fileName);
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, destinationPath + fileName);
+        request.setDestinationInExternalPublicDir(Environment.getExternalStorageDirectory().getAbsolutePath(), destinationPath + fileName);
         ((DownloadManager)context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
     }
 
