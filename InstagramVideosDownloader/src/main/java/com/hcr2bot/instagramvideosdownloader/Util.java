@@ -9,7 +9,6 @@ import android.widget.Toast;
 public class Util {
 
 
-    public static String RootDirectoryInstagram = "/Sous/Instagram/";
 
 
     public static void download(String downloadPath, String destinationPath, Context context, String fileName){
