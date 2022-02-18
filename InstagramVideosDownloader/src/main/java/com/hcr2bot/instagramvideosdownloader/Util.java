@@ -18,7 +18,7 @@ public class Util {
         request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE | DownloadManager.Request.NETWORK_WIFI);
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         request.setTitle(fileName);
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,destinationPath + fileName);
+        request.setDestinationInExternalPublicDir(Environment.getExternalStorageDirectory(),destinationPath + fileName);
         ((DownloadManager)context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
     }
 
