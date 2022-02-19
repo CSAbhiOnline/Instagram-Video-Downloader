@@ -138,7 +138,7 @@ public class InstaVideo {
                         e.printStackTrace();
                     }
                     Log.d("finalURL", finalVideoUrl[0]);
-                    Util.download(finalVideoUrl[0], "/Sous/Instagram/" + directory + "/", context, System.currentTimeMillis() + ".mp4");
+                    Util.download(finalVideoUrl[0], "/Sousse/Instagram/" + directory + "/", context, System.currentTimeMillis() + ".mp4");
 
 
                 }
